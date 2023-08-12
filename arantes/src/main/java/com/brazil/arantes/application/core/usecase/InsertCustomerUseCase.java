@@ -2,10 +2,11 @@ package com.brazil.arantes.application.core.usecase;
 
 import com.brazil.arantes.application.core.domain.Address;
 import com.brazil.arantes.application.core.domain.Customer;
+import com.brazil.arantes.application.ports.in.InsertCustomerInputPort;
 import com.brazil.arantes.application.ports.out.FindAddressByZipCodeOutputPort;
 import com.brazil.arantes.application.ports.out.InsertCustomerOutputPort;
 
-public class InsertCustomerUseCase {
+public class InsertCustomerUseCase implements InsertCustomerInputPort {
     private final FindAddressByZipCodeOutputPort findAddressByZipCodeOutputPort;
     private final InsertCustomerOutputPort insertCustomerOutputPort;
 
@@ -15,6 +16,7 @@ public class InsertCustomerUseCase {
         this.insertCustomerOutputPort = insertCustomerOutputPort;
     }
 
+    @Override
     public void insert(Customer customer, String zipCode) {
         // obtendo o endereco do cliente
         Address address = findAddressByZipCodeOutputPort.find(zipCode);
