@@ -6,7 +6,9 @@ import com.brazil.arantes.adapters.out.client.response.AddressResponse;
 import com.brazil.arantes.application.core.domain.Address;
 import com.brazil.arantes.application.ports.out.FindAddressByZipCodeOutputPort;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FindAddressByZipCodeAdapter implements FindAddressByZipCodeOutputPort {
     @Autowired
     private FindAddressByZipCodeClient findAddressByZipCodeClient;

@@ -1,3 +1,6 @@
+server:
+  port: 8081
+
 # url de acesso do microservice de busca de endereco por cep
 arantes:
   client:
