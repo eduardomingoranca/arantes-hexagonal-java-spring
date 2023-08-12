@@ -1,6 +1,7 @@
 package com.brazil.arantes.adapters.in.controller.mapper;
 
 import com.brazil.arantes.adapters.in.controller.request.CustomerRequest;
+import com.brazil.arantes.adapters.in.controller.response.CustomerResponse;
 import com.brazil.arantes.application.core.domain.Customer;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -12,4 +13,5 @@ public interface CustomerMapper {
     @Mapping(target = "isValidCpf", ignore = true)
     Customer toCustomer(CustomerRequest customerRequest);
 
+    CustomerResponse toCustomerResponse(Customer customer);
 }
