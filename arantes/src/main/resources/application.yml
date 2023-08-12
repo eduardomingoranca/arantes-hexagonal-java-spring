@@ -7,4 +7,9 @@ arantes:
 spring:
   data:
     mongodb:
-      uri: mongodb://127.0.0.1:27017/arantes
+      host: localhost
+      port: 27017
+      authentication-database: admin
+      username: root
+      password: example
+      database: hexagonal
