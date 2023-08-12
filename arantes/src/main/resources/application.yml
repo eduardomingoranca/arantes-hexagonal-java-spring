@@ -3,3 +3,8 @@ arantes:
   client:
     address:
       url: http://127.0.0.1:8082/addresses
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/arantes
