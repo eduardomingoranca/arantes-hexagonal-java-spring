@@ -1,0 +1,5 @@
+# url de acesso do microservice de busca de endereco por cep
+arantes:
+  client:
+    address:
+      url: http://127.0.0.1:8082/addresses
